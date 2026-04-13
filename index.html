@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chic Resine — Peças artesanais únicas feitas em resina. Arte e sofisticação em cada criação.">
+  <title>Chic Resine — Arte em Resina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Gradiente prateado reutilizável pelos ícones SVG -->
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <defs>
+      <linearGradient id="silver-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#E2E8EE"/>
+        <stop offset="40%"  stop-color="#A8B4BC"/>
+        <stop offset="70%"  stop-color="#C8D0D8"/>
+        <stop offset="100%" stop-color="#8C9AA4"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" aria-label="Chic Resine — início">
+        <img src="img/logo.png" alt="Chic Resine" class="logo-img">
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#processo" class="nav-link">Processo</a></li>
+        <li><a href="#galeria" class="nav-link">Galeria</a></li>
+        <li><a href="#como-comprar" class="nav-link">Como Comprar</a></li>
+        <li><a href="#contato" class="nav-link nav-cta">Contato</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#sobre" class="mobile-link">Sobre</a></li>
+      <li><a href="#processo" class="mobile-link">Processo</a></li>
+      <li><a href="#galeria" class="mobile-link">Galeria</a></li>
+      <li><a href="#como-comprar" class="mobile-link">Como Comprar</a></li>
+      <li><a href="#contato" class="mobile-link">Contato</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <!-- Canto superior direito — ramo floral grande -->
+    <div class="hero-deco hero-deco-tr" aria-hidden="true">
+      <svg viewBox="0 0 480 560" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Haste principal diagonal -->
+        <path d="M30 0 C70 55 95 110 135 165 C175 220 210 265 225 330 C238 385 235 440 220 500" stroke-width="1.5"/>
+        <!-- Galho A — vai para direita -->
+        <path d="M90 95 C125 72 162 65 198 76 C230 86 255 105 272 122" stroke-width="1.1"/>
+        <!-- Galho B — vai para baixo-direita -->
+        <path d="M172 220 C208 218 242 232 262 255 C278 274 282 300 275 326" stroke-width="1"/>
+        <!-- Galho C — vai para esquerda -->
+        <path d="M200 310 C165 298 130 292 96 306 C62 320 40 344 32 374" stroke-width="1"/>
+        <!-- Galho pequeno topo -->
+        <path d="M48 40 C30 25 8 18 0 30" stroke-width="0.9"/>
+
+        <!-- FOLHAS — Haste principal -->
+        <path d="M60 48 C42 28 18 26 16 40 C14 54 36 62 58 54 C62 52 60 48 60 48Z" stroke-width="1"/>
+        <line x1="60" y1="48" x2="17" y2="41" stroke-width="0.55"/>
+        <path d="M62 50 C80 30 104 30 101 46 C98 62 74 64 62 55 C61 53 62 50 62 50Z" stroke-width="1"/>
+        <line x1="62" y1="50" x2="100" y2="47" stroke-width="0.55"/>
+
+        <path d="M128 160 C108 138 82 136 80 152 C78 168 104 176 126 166 C130 164 128 160 128 160Z" stroke-width="1"/>
+        <line x1="128" y1="160" x2="81" y2="153" stroke-width="0.55"/>
+        <path d="M130 162 C150 140 176 140 172 158 C168 176 142 176 130 166 C129 164 130 162 130 162Z" stroke-width="1"/>
+        <line x1="130" y1="162" x2="171" y2="159" stroke-width="0.55"/>
+
+        <!-- FOLHAS — Galho A -->
+        <path d="M148 66 C132 46 108 44 106 58 C104 72 126 80 146 72 C150 70 148 66 148 66Z" stroke-width="1"/>
+        <line x1="148" y1="66" x2="107" y2="59" stroke-width="0.55"/>
+        <path d="M204 80 C190 60 166 60 165 74 C164 88 186 95 202 87 C206 85 204 80 204 80Z" stroke-width="1"/>
+        <line x1="204" y1="80" x2="166" y2="75" stroke-width="0.55"/>
+
+        <!-- FOLHA GRANDE — Galho C -->
+        <path d="M96 306 C68 284 40 286 38 304 C36 322 64 330 92 318 C98 315 96 306 96 306Z" stroke-width="1.1"/>
+        <line x1="96" y1="306" x2="39" y2="305" stroke-width="0.65"/>
+        <path d="M34 375 C12 356 -10 360 -12 376 C-14 392 10 398 32 388 C38 385 34 375 34 375Z" stroke-width="1"/>
+        <line x1="34" y1="375" x2="-11" y2="377" stroke-width="0.55"/>
+
+        <!-- ROSA 1 — fim do galho A -->
+        <g transform="translate(273 124)">
+          <circle r="7" stroke-width="1.3"/>
+          <ellipse cy="-18" rx="8" ry="13" stroke-width="1.1"/>
+          <ellipse cy="-18" rx="8" ry="13" transform="rotate(60)" stroke-width="1.1"/>
+          <ellipse cy="-18" rx="8" ry="13" transform="rotate(120)" stroke-width="1.1"/>
+          <ellipse cy="-18" rx="8" ry="13" transform="rotate(180)" stroke-width="1.1"/>
+          <ellipse cy="-18" rx="8" ry="13" transform="rotate(240)" stroke-width="1.1"/>
+          <ellipse cy="-18" rx="8" ry="13" transform="rotate(300)" stroke-width="1.1"/>
+          <ellipse cy="-12" rx="6" ry="9" stroke-width="0.9"/>
+          <ellipse cy="-12" rx="6" ry="9" transform="rotate(120)" stroke-width="0.9"/>
+          <ellipse cy="-12" rx="6" ry="9" transform="rotate(240)" stroke-width="0.9"/>
+          <!-- sépalas -->
+          <path d="M-5 7 C-10 18 -7 25 -3 19" stroke-width="0.7"/>
+          <path d="M5 7 C10 18 7 25 3 19" stroke-width="0.7"/>
+          <path d="M0 8 C0 20 2 24 0 20" stroke-width="0.7"/>
+        </g>
+
+        <!-- ROSA 2 — haste principal meio -->
+        <g transform="translate(240 335)">
+          <circle r="8" stroke-width="1.3"/>
+          <ellipse cy="-20" rx="9" ry="15" stroke-width="1.1"/>
+          <ellipse cy="-20" rx="9" ry="15" transform="rotate(60)" stroke-width="1.1"/>
+          <ellipse cy="-20" rx="9" ry="15" transform="rotate(120)" stroke-width="1.1"/>
+          <ellipse cy="-20" rx="9" ry="15" transform="rotate(180)" stroke-width="1.1"/>
+          <ellipse cy="-20" rx="9" ry="15" transform="rotate(240)" stroke-width="1.1"/>
+          <ellipse cy="-20" rx="9" ry="15" transform="rotate(300)" stroke-width="1.1"/>
+          <ellipse cy="-13" rx="6" ry="9" stroke-width="0.85"/>
+          <ellipse cy="-13" rx="6" ry="9" transform="rotate(90)" stroke-width="0.85"/>
+          <ellipse cy="-13" rx="6" ry="9" transform="rotate(180)" stroke-width="0.85"/>
+          <ellipse cy="-13" rx="6" ry="9" transform="rotate(270)" stroke-width="0.85"/>
+          <path d="M-6 8 C-11 20 -8 28 -3 21" stroke-width="0.7"/>
+          <path d="M6 8 C11 20 8 28 3 21" stroke-width="0.7"/>
+        </g>
+
+        <!-- FLORZINHA — galho C -->
+        <g transform="translate(36 376)">
+          <circle r="5" stroke-width="1.1"/>
+          <ellipse cy="-13" rx="6" ry="10" stroke-width="1"/>
+          <ellipse cy="-13" rx="6" ry="10" transform="rotate(72)" stroke-width="1"/>
+          <ellipse cy="-13" rx="6" ry="10" transform="rotate(144)" stroke-width="1"/>
+          <ellipse cy="-13" rx="6" ry="10" transform="rotate(216)" stroke-width="1"/>
+          <ellipse cy="-13" rx="6" ry="10" transform="rotate(288)" stroke-width="1"/>
+        </g>
+
+        <!-- BOTÕES ao longo das hastes -->
+        <path d="M6 32 C3 18 -4 12 -7 18 C-10 24 -5 33 6 32Z" stroke-width="1"/>
+        <path d="M6 32 C16 20 18 12 13 13 C8 14 5 25 6 32Z" stroke-width="1"/>
+        <path d="M6 34 C6 46 4 52 5 56" stroke-width="0.85"/>
+
+        <path d="M184 232 C181 220 175 215 172 220 C169 225 173 234 184 232Z" stroke-width="0.95"/>
+        <path d="M184 232 C192 221 194 214 190 215 C186 216 183 226 184 232Z" stroke-width="0.95"/>
+        <path d="M184 234 C183 244 181 249 182 253" stroke-width="0.8"/>
+
+        <!-- Bagas pequenas -->
+        <circle cx="252" cy="148" r="2.5" stroke-width="0.9"/>
+        <circle cx="262" cy="140" r="2" stroke-width="0.9"/>
+        <circle cx="258" cy="133" r="2" stroke-width="0.9"/>
+
+        <!-- Haste final com folha -->
+        <path d="M220 502 C210 528 206 554 216 576" stroke-width="1"/>
+        <path d="M208 540 C188 524 166 528 166 544 C166 560 188 564 207 554 C214 550 208 540 208 540Z" stroke-width="1"/>
+        <line x1="208" y1="540" x2="167" y2="545" stroke-width="0.55"/>
+      </svg>
+    </div>
+
+    <!-- Canto inferior esquerdo — espelho do ramo -->
+    <div class="hero-deco hero-deco-bl" aria-hidden="true">
+      <svg viewBox="0 0 460 540" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M430 540 C390 485 365 430 325 375 C285 320 248 270 232 208 C218 152 222 95 235 42" stroke-width="1.5"/>
+        <path d="M370 446 C335 468 298 475 262 462 C230 450 206 432 188 415" stroke-width="1.1"/>
+        <path d="M286 322 C250 324 216 312 196 290 C178 270 173 244 180 218" stroke-width="1"/>
+        <path d="M258 230 C293 242 328 248 362 234 C396 220 418 196 426 166" stroke-width="1"/>
+
+        <!-- Folhas -->
+        <path d="M398 452 C416 432 440 430 442 446 C444 462 422 470 400 460 C396 458 398 452 398 452Z" stroke-width="1"/>
+        <line x1="398" y1="452" x2="441" y2="447" stroke-width="0.55"/>
+        <path d="M396 454 C378 434 354 434 356 450 C358 466 382 468 394 459 C397 457 396 454 396 454Z" stroke-width="1"/>
+        <line x1="396" y1="454" x2="357" y2="451" stroke-width="0.55"/>
+
+        <path d="M330 372 C350 350 374 348 376 364 C378 380 354 388 332 378 C328 376 330 372 330 372Z" stroke-width="1"/>
+        <line x1="330" y1="372" x2="375" y2="365" stroke-width="0.55"/>
+        <path d="M328 374 C308 352 284 352 286 368 C288 384 312 386 326 376 C329 374 328 374 328 374Z" stroke-width="1"/>
+        <line x1="328" y1="374" x2="287" y2="369" stroke-width="0.55"/>
+
+        <path d="M262 462 C244 480 220 478 218 464 C216 450 238 443 258 454 C262 457 262 462 262 462Z" stroke-width="1"/>
+        <line x1="262" y1="462" x2="219" y2="463" stroke-width="0.55"/>
+        <path d="M424 163 C442 144 466 146 466 162 C466 178 443 183 425 172 C421 170 424 163 424 163Z" stroke-width="1"/>
+        <line x1="424" y1="163" x2="465" y2="163" stroke-width="0.55"/>
+
+        <!-- Rosa 1 -->
+        <g transform="translate(186 412)">
+          <circle r="7" stroke-width="1.3"/>
+          <ellipse cy="-18" rx="8" ry="13" stroke-width="1.1"/>
+          <ellipse cy="-18" rx="8" ry="13" transform="rotate(60)" stroke-width="1.1"/>
+          <ellipse cy="-18" rx="8" ry="13" transform="rotate(120)" stroke-width="1.1"/>
+          <ellipse cy="-18" rx="8" ry="13" transform="rotate(180)" stroke-width="1.1"/>
+          <ellipse cy="-18" rx="8" ry="13" transform="rotate(240)" stroke-width="1.1"/>
+          <ellipse cy="-18" rx="8" ry="13" transform="rotate(300)" stroke-width="1.1"/>
+          <ellipse cy="-12" rx="6" ry="9" stroke-width="0.9"/>
+          <ellipse cy="-12" rx="6" ry="9" transform="rotate(120)" stroke-width="0.9"/>
+          <ellipse cy="-12" rx="6" ry="9" transform="rotate(240)" stroke-width="0.9"/>
+        </g>
+
+        <!-- Rosa 2 -->
+        <g transform="translate(222 208)">
+          <circle r="8" stroke-width="1.3"/>
+          <ellipse cy="-20" rx="9" ry="15" stroke-width="1.1"/>
+          <ellipse cy="-20" rx="9" ry="15" transform="rotate(60)" stroke-width="1.1"/>
+          <ellipse cy="-20" rx="9" ry="15" transform="rotate(120)" stroke-width="1.1"/>
+          <ellipse cy="-20" rx="9" ry="15" transform="rotate(180)" stroke-width="1.1"/>
+          <ellipse cy="-20" rx="9" ry="15" transform="rotate(240)" stroke-width="1.1"/>
+          <ellipse cy="-20" rx="9" ry="15" transform="rotate(300)" stroke-width="1.1"/>
+          <ellipse cy="-13" rx="6" ry="9" stroke-width="0.85"/>
+          <ellipse cy="-13" rx="6" ry="9" transform="rotate(90)" stroke-width="0.85"/>
+          <ellipse cy="-13" rx="6" ry="9" transform="rotate(180)" stroke-width="0.85"/>
+          <ellipse cy="-13" rx="6" ry="9" transform="rotate(270)" stroke-width="0.85"/>
+        </g>
+
+        <!-- Botão -->
+        <path d="M237 44 C240 30 248 24 250 30 C252 36 247 44 237 44Z" stroke-width="1"/>
+        <path d="M237 44 C228 32 226 24 231 25 C236 26 238 36 237 44Z" stroke-width="1"/>
+        <path d="M237 46 C237 58 239 64 238 68" stroke-width="0.85"/>
+
+        <!-- Bagas -->
+        <circle cx="200" cy="395" r="2.5" stroke-width="0.9"/>
+        <circle cx="192" cy="404" r="2" stroke-width="0.9"/>
+        <circle cx="207" cy="408" r="2" stroke-width="0.9"/>
+      </svg>
+    </div>
+
+    <!-- Canto superior esquerdo — acento menor -->
+    <div class="hero-deco hero-deco-tl" aria-hidden="true">
+      <svg viewBox="0 0 280 380" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M250 0 C210 45 185 95 165 148 C145 200 140 255 148 308" stroke-width="1.3"/>
+        <path d="M205 60 C172 44 136 40 104 52 C72 64 48 85 30 110" stroke-width="1"/>
+        <path d="M155 190 C125 185 98 194 78 212 C58 230 48 256 52 282" stroke-width="0.95"/>
+
+        <!-- Folhas -->
+        <path d="M196 56 C178 36 154 36 152 52 C150 68 172 74 192 66 C198 63 196 56 196 56Z" stroke-width="1"/>
+        <line x1="196" y1="56" x2="153" y2="53" stroke-width="0.55"/>
+        <path d="M98 55 C82 35 58 37 57 53 C56 69 78 74 96 65 C100 62 98 55 98 55Z" stroke-width="1"/>
+        <line x1="98" y1="55" x2="58" y2="54" stroke-width="0.55"/>
+        <path d="M76 214 C58 196 34 198 33 214 C32 230 54 235 74 225 C79 222 76 214 76 214Z" stroke-width="1"/>
+        <line x1="76" y1="214" x2="34" y2="215" stroke-width="0.55"/>
+
+        <!-- Rosa pequena -->
+        <g transform="translate(30 112)">
+          <circle r="6" stroke-width="1.2"/>
+          <ellipse cy="-16" rx="7" ry="12" stroke-width="1"/>
+          <ellipse cy="-16" rx="7" ry="12" transform="rotate(72)" stroke-width="1"/>
+          <ellipse cy="-16" rx="7" ry="12" transform="rotate(144)" stroke-width="1"/>
+          <ellipse cy="-16" rx="7" ry="12" transform="rotate(216)" stroke-width="1"/>
+          <ellipse cy="-16" rx="7" ry="12" transform="rotate(288)" stroke-width="1"/>
+          <ellipse cy="-11" rx="5" ry="8" stroke-width="0.85"/>
+          <ellipse cy="-11" rx="5" ry="8" transform="rotate(120)" stroke-width="0.85"/>
+          <ellipse cy="-11" rx="5" ry="8" transform="rotate(240)" stroke-width="0.85"/>
+        </g>
+
+        <!-- Botão de canto -->
+        <path d="M254 -2 C251 -14 244 -20 241 -14 C238 -8 243 0 254 -2Z" stroke-width="1"/>
+        <path d="M254 -2 C262 -12 263 -20 258 -19 C253 -18 252 -8 254 -2Z" stroke-width="1"/>
+        <path d="M254 0 C254 12 252 17 253 21" stroke-width="0.85"/>
+
+        <!-- Baga -->
+        <circle cx="120" cy="50" r="2.5" stroke-width="0.9"/>
+        <circle cx="112" cy="44" r="2" stroke-width="0.9"/>
+      </svg>
+    </div>
+
+    <!-- Canto inferior direito — acento pequeno -->
+    <div class="hero-deco hero-deco-br" aria-hidden="true">
+      <svg viewBox="0 0 240 300" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 300 C40 255 58 205 72 155 C86 105 95 60 88 18" stroke-width="1.2"/>
+        <path d="M52 230 C82 218 112 218 136 232 C158 244 170 265 168 286" stroke-width="0.95"/>
+        <path d="M78 140 C108 128 140 128 160 148" stroke-width="0.9"/>
+
+        <!-- Folhas -->
+        <path d="M50 232 C34 212 10 214 9 230 C8 246 30 250 48 240 C52 238 50 232 50 232Z" stroke-width="1"/>
+        <line x1="50" y1="232" x2="10" y2="231" stroke-width="0.55"/>
+        <path d="M78 136 C62 116 38 118 38 134 C38 150 60 154 76 144 C80 141 78 136 78 136Z" stroke-width="1"/>
+        <line x1="78" y1="136" x2="39" y2="135" stroke-width="0.55"/>
+
+        <!-- Rosa -->
+        <g transform="translate(164 152)">
+          <circle r="6" stroke-width="1.2"/>
+          <ellipse cy="-16" rx="7" ry="11" stroke-width="1"/>
+          <ellipse cy="-16" rx="7" ry="11" transform="rotate(60)" stroke-width="1"/>
+          <ellipse cy="-16" rx="7" ry="11" transform="rotate(120)" stroke-width="1"/>
+          <ellipse cy="-16" rx="7" ry="11" transform="rotate(180)" stroke-width="1"/>
+          <ellipse cy="-16" rx="7" ry="11" transform="rotate(240)" stroke-width="1"/>
+          <ellipse cy="-16" rx="7" ry="11" transform="rotate(300)" stroke-width="1"/>
+        </g>
+
+        <path d="M90 18 C88 5 82 -1 79 5 C76 11 80 20 90 18Z" stroke-width="1"/>
+        <path d="M90 18 C99 7 100 -1 96 0 C92 1 89 12 90 18Z" stroke-width="1"/>
+        <path d="M90 20 C90 32 88 37 89 41" stroke-width="0.85"/>
+      </svg>
+    </div>
+
+    <div class="hero-content fade-in">
+      <div class="hero-logo">
+        <img src="img/logo.png" alt="Chic Resine" class="hero-logo-img">
+      </div>
+      <span class="hero-eyebrow">Artesanato em Resina</span>
+      <h1 class="hero-title">Chic Resine</h1>
+      <p class="hero-subtitle">Cada peça conta uma história.<br>Criada com alma, entregue com amor.</p>
+      <div class="hero-buttons">
+        <a href="#galeria" class="btn btn-gold">Ver Coleção</a>
+        <a href="#sobre" class="btn btn-ghost">Nossa História</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Rolar</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image fade-in-left">
+          <div class="img-placeholder about-placeholder">
+            <span>Foto da Artista</span>
+          </div>
+          <div class="about-badge">
+            <span class="badge-num">5+</span>
+            <span class="badge-label">Anos de<br>Experiência</span>
+          </div>
+        </div>
+        <div class="about-text fade-in-right">
+          <span class="eyebrow">Nossa História</span>
+          <h2>Arte que nasce<br>da natureza</h2>
+          <p class="lead-text">Sou apaixonada por transformar elementos da natureza em peças únicas e atemporais.</p>
+          <p>Tudo começou com a curiosidade de preservar flores em resina — e o que era hobby virou arte. Cada criação carrega a essência das flores, folhas e elementos naturais que tanto me inspiram.</p>
+          <p>Trabalho com resina epóxi de alta qualidade, garantindo peças duráveis, translúcidas e com acabamento sofisticado. Do design à entrega, cada etapa é realizada com atenção e carinho.</p>
+          <ul class="values-list">
+            <li><span class="value-dot"></span>Peças únicas e exclusivas</li>
+            <li><span class="value-dot"></span>Materiais de alta qualidade</li>
+            <li><span class="value-dot"></span>Encomendas personalizadas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESSO ===== -->
+  <section id="processo" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow light">O Processo</span>
+        <h2 class="light">Do conceito à criação</h2>
+        <p class="desc light">Cada peça passa por um processo cuidadoso para garantir qualidade e beleza únicas.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step fade-in">
+          <div class="step-num">01</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 8 C24 8 18 4 12 8 C12 8 15 18 24 16 C33 18 36 8 36 8 C30 4 24 8 24 8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M24 16 L24 40" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M24 24 C20 20 14 22 12 28" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M24 32 C28 28 34 30 36 36" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <h3>Inspiração</h3>
+          <p>Escolha dos elementos naturais — flores secas, folhas, pigmentos e inclusões especiais.</p>
+        </div>
+        <div class="process-step fade-in">
+          <div class="step-num">02</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="16" width="28" height="22" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M18 16 L18 12 L30 12 L30 16" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M17 27 L22 32 L31 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Composição</h3>
+          <p>Os elementos são dispostos cuidadosamente no molde, criando composição harmoniosa.</p>
+        </div>
+        <div class="process-step fade-in">
+          <div class="step-num">03</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 10 L20 28 C20 32 24 36 24 36 C24 36 28 32 28 28 L28 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M17 16 L31 16" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M16 22 L32 22" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
+            </svg>
+          </div>
+          <h3>Fusão</h3>
+          <p>A resina epóxi é preparada e vertida com precisão, envolvendo cada elemento como cristal.</p>
+        </div>
+        <div class="process-step fade-in">
+          <div class="step-num">04</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="13" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M24 14 L24 24 L31 29" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Cura</h3>
+          <p>A peça descansa em ambiente controlado por 24 a 72 horas para garantir clareza perfeita.</p>
+        </div>
+        <div class="process-step fade-in">
+          <div class="step-num">05</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 8 L28 18 L40 19 L32 27 L34 39 L24 33 L14 39 L16 27 L8 19 L20 18 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Acabamento</h3>
+          <p>Lixamento, polimento e verniz para o brilho final. Cada detalhe revisado com cuidado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERIA ===== -->
+  <section id="galeria" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Portfólio</span>
+        <h2>Coleção</h2>
+        <p class="desc">Cada peça é única — criada com flores, elementos naturais e muito amor.</p>
+      </div>
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="bijuterias">Bijuterias</button>
+        <button class="filter-btn" data-filter="quadros">Quadros</button>
+        <button class="filter-btn" data-filter="decoracao">Decoração</button>
+      </div>
+      <!-- ─ Para adicionar fotos: salve os arquivos em img/produtos/
+           com os nomes exatos abaixo (jpg, jpeg ou png são aceitos).
+           Enquanto não houver foto, aparece um gradiente colorido. ─ -->
+      <div class="gallery-grid" id="gallery">
+        <div class="gallery-item" data-category="bijuterias">
+          <div class="gallery-img gp-1">
+            <img src="img/produtos/produto-1.jpg" alt="Colar Floral" class="gallery-photo" onerror="this.style.display='none'">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Bijuterias</span>
+              <h4>Colar Floral</h4>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item gallery-tall" data-category="quadros">
+          <div class="gallery-img gp-2">
+            <img src="img/produtos/produto-2.jpg" alt="Jardim Eterno" class="gallery-photo" onerror="this.style.display='none'">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Quadros</span>
+              <h4>Jardim Eterno</h4>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="decoracao">
+          <div class="gallery-img gp-3">
+            <img src="img/produtos/produto-3.jpg" alt="Bandeja Âmbar" class="gallery-photo" onerror="this.style.display='none'">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Decoração</span>
+              <h4>Bandeja Âmbar</h4>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="bijuterias">
+          <div class="gallery-img gp-4">
+            <img src="img/produtos/produto-4.jpg" alt="Conjunto Lavanda" class="gallery-photo" onerror="this.style.display='none'">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Bijuterias</span>
+              <h4>Conjunto Lavanda</h4>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="decoracao">
+          <div class="gallery-img gp-5">
+            <img src="img/produtos/produto-5.jpg" alt="Porta-joias" class="gallery-photo" onerror="this.style.display='none'">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Decoração</span>
+              <h4>Porta-joias</h4>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item gallery-tall" data-category="quadros">
+          <div class="gallery-img gp-6">
+            <img src="img/produtos/produto-6.jpg" alt="Flores Preservadas" class="gallery-photo" onerror="this.style.display='none'">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Quadros</span>
+              <h4>Flores Preservadas</h4>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="bijuterias">
+          <div class="gallery-img gp-7">
+            <img src="img/produtos/produto-7.jpg" alt="Brincos Aurora" class="gallery-photo" onerror="this.style.display='none'">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Bijuterias</span>
+              <h4>Brincos Aurora</h4>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="decoracao">
+          <div class="gallery-img gp-8">
+            <img src="img/produtos/produto-8.jpg" alt="Vaso Translúcido" class="gallery-photo" onerror="this.style.display='none'">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Decoração</span>
+              <h4>Vaso Translúcido</h4>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="bijuterias">
+          <div class="gallery-img gp-9">
+            <img src="img/produtos/produto-9.jpg" alt="Pulseira Botânica" class="gallery-photo" onerror="this.style.display='none'">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Bijuterias</span>
+              <h4>Pulseira Botânica</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMO COMPRAR ===== -->
+  <section id="como-comprar" class="section section-cream">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Pedidos</span>
+        <h2>Como fazer seu pedido</h2>
+        <p class="desc">Trabalho com encomendas personalizadas e peças disponíveis. Veja como ter a sua.</p>
+      </div>
+      <div class="buy-steps">
+        <div class="buy-step fade-in">
+          <div class="buy-num">1</div>
+          <div class="buy-content">
+            <h3>Entre em Contato</h3>
+            <p>Envie uma mensagem pelo formulário, WhatsApp ou Instagram descrevendo a peça desejada. Peças personalizadas são bem-vindas!</p>
+          </div>
+        </div>
+        <div class="buy-step fade-in">
+          <div class="buy-num">2</div>
+          <div class="buy-content">
+            <h3>Aprovação do Orçamento</h3>
+            <p>Receba o orçamento com prazo de produção, valores e condições. Aprovado, iniciamos sua peça imediatamente.</p>
+          </div>
+        </div>
+        <div class="buy-step fade-in">
+          <div class="buy-num">3</div>
+          <div class="buy-content">
+            <h3>Produção com Carinho</h3>
+            <p>Sua peça é criada com atenção a cada detalhe. Você recebe fotos do processo para acompanhar a criação.</p>
+          </div>
+        </div>
+        <div class="buy-step fade-in">
+          <div class="buy-num">4</div>
+          <div class="buy-content">
+            <h3>Entrega</h3>
+            <p>Enviamos para todo o Brasil com embalagem segura e elegante. Retirada em mãos também disponível.</p>
+          </div>
+        </div>
+      </div>
+      <div class="payment-box">
+        <h3>Formas de Pagamento</h3>
+        <div class="payment-options">
+          <div class="payment-opt">
+            <span class="pay-icon">💳</span>
+            <strong>Cartão de Crédito</strong>
+            <span>até 6x sem juros</span>
+          </div>
+          <div class="payment-opt">
+            <span class="pay-icon">📱</span>
+            <strong>Pix</strong>
+            <span>5% de desconto</span>
+          </div>
+          <div class="payment-opt">
+            <span class="pay-icon">🏦</span>
+            <strong>Transferência</strong>
+            <span>TED / DOC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section id="contato" class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info fade-in-left">
+          <span class="eyebrow">Fale Conosco</span>
+          <h2>Entre em contato</h2>
+          <p>Tem dúvidas, quer encomendar uma peça personalizada ou apenas quer conversar sobre resina? Estou aqui para você.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M3 8L10.89 13.26C11.22 13.48 11.6 13.6 12 13.6C12.4 13.6 12.78 13.48 13.11 13.26L21 8M5 19H19C20.1 19 21 18.1 21 17V7C21 5.9 20.1 5 19 5H5C3.9 5 3 5.9 3 7V17C3 18.1 3.9 19 5 19Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-label">E-mail</span>
+                <a href="mailto:contato@chicresine.com.br">contato@chicresine.com.br</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M3 5C3 3.9 3.9 3 5 3H8.28C8.71 3 9.09 3.28 9.23 3.68L10.73 8.18C10.88 8.65 10.67 9.17 10.22 9.39L7.97 10.52C9.07 12.96 11.04 14.93 13.48 16.03L14.61 13.78C14.83 13.33 15.35 13.12 15.82 13.27L20.32 14.77C20.72 14.91 21 15.29 21 15.72V19C21 20.1 20.1 21 19 21H18C9.72 21 3 14.28 3 6V5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-label">WhatsApp</span>
+                <a href="https://wa.me/5500000000000">(00) 00000-0000</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-label">Instagram</span>
+                <a href="#">@chicresine</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap fade-in-right">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Assunto</label>
+              <select id="subject" name="subject">
+                <option value="">Selecione...</option>
+                <option value="encomenda">Fazer uma encomenda</option>
+                <option value="personalizado">Peça personalizada</option>
+                <option value="duvida">Tirar uma dúvida</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="5" placeholder="Descreva o que você busca..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/logo.png" alt="Chic Resine" class="footer-logo-img">
+          <p>Arte em resina feita com alma, delicadeza e amor pela natureza.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 5C3 3.9 3.9 3 5 3H8.28C8.71 3 9.09 3.28 9.23 3.68L10.73 8.18C10.88 8.65 10.67 9.17 10.22 9.39L7.97 10.52C9.07 12.96 11.04 14.93 13.48 16.03L14.61 13.78C14.83 13.33 15.35 13.12 15.82 13.27L20.32 14.77C20.72 14.91 21 15.29 21 15.72V19C21 20.1 20.1 21 19 21H18C9.72 21 3 14.28 3 6V5Z" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#processo">Processo</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#como-comprar">Como Comprar</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informações</h4>
+          <ul>
+            <li>Envio para todo Brasil</li>
+            <li>Peças personalizadas</li>
+            <li>Prazo: 7 a 15 dias úteis</li>
+            <li>Garantia de qualidade</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Chic Resine. Todos os direitos reservados.</p>
+        <p>Feito com ♡ e resina</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizar peça">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">×</button>
+    <div class="lightbox-inner" id="lightbox-inner"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
