@@ -204,8 +204,8 @@ h2.light { color: var(--ivory); }
   margin-bottom: 28px;
 }
 .hero-logo-img {
-  width: 130px;
-  height: 130px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 8px 36px rgba(58,42,4,.3), 0 0 0 3px rgba(196,152,30,.5);
@@ -476,6 +476,14 @@ h2.light { color: var(--ivory); }
 .about-placeholder {
   aspect-ratio: 4/5;
   background: linear-gradient(140deg, var(--cream) 0%, var(--cream-dark) 55%, #C8B898 100%);
+}
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 3px;
+  display: block;
 }
 
 .about-image { position: relative; }
